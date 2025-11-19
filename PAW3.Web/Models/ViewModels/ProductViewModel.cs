@@ -3,7 +3,7 @@ namespace PAW3.Web.Models.ViewModels;
 public class ProductDtoViewModel
 {
     public IEnumerable<ProductViewModel> Products { get; set; } = [];
-    public List<ProductSummaryViewModel> Summaries { get; set; } = [];
+    public List<SummaryViewModel> Summaries { get; set; } = [];
 }
 
 public class ProductSummaryViewModel
@@ -25,5 +25,13 @@ public class ProductViewModel
     public int? CategoryId { get; set; }
     public DateTime? LastModified { get; set; }
     public string? ModifiedBy { get; set; }
+}
+
+public class SummaryViewModel
+{
+    public decimal? Id { get; set; }
+    public string? Name { get; set; }
+    public decimal? Value { get; set; }
+    public int Count { get; set; }
 }
 
